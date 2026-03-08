@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.page-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 300;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
