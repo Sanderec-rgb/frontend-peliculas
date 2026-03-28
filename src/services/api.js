@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// IMPORTANTE: Esta URL debe apuntar a tu BACKEND (Node.js)
-// NO es la URL de phpMyAdmin, es la URL de tu API
-const API_URL = 'http://localhost:3000/api'; // Puerto 3000 (el de tu backend)
+// IMPORTANTE: Esta URL debe apuntar a tu BACKEND en Render
+const API_URL = 'https://api-rest-nodejs-3-xlee.onrender.com';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -25,8 +24,8 @@ api.interceptors.response.use(
   },
   error => {
     console.error('❌ Error:', error.message);
-    if (error.code === 'ECONNREFUSED') {
-      console.error('   ¿El backend está corriendo en http://localhost:3000?');
+    if (error.code === 'ECONNREFUSED' || error.message === 'Network Error') {
+      console.error(`   ¿El backend está corriendo en ${API_URL}?`);
     }
     return Promise.reject(error);
   }
