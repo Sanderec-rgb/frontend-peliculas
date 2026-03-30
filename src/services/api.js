@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // IMPORTANTE: Esta URL debe apuntar a tu BACKEND en Render
-const API_URL = 'https://api-rest-nodejs-4.onrender.com/api';
+const API_URL = 'https://api-rest-nodejs-5.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
